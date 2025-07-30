@@ -57,7 +57,7 @@ public class AnotherClass
     }
 }
 ```
-4. **Starting a Delayed Task**  
+3. **Starting a Delayed Task**  
    Execute a specific `Action` after a set amount of time:
 
 ```csharp
@@ -78,7 +78,7 @@ public class TimerExample
     }
 }
 ```
-5. **Executing a Task at the Next Frame**  
+4. **Executing a Task at the Next Frame**  
    Perform an `Action` at the beginning of the very next frame:
 ```csharp
 public class NextFrameExample
