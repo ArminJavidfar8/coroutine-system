@@ -1,0 +1,17 @@
+{
+    "name": "CoroutineService.Core",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8d3e3f1096708fd43a099333aa217843",
+        "GUID:8a1a3b6073fa2fc4bb202899c94bb329"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

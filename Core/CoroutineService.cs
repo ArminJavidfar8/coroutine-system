@@ -1,14 +1,15 @@
-using Services.CoroutineSystem.Abstractio;
+using YekGames.CoroutineSystem.Abstractio;
 using System;
 using System.Collections;
 using UnityEngine;
+using YekGames.CoroutineSystem.Mono;
 
-namespace Services.CoroutineSystem.Core
+namespace YekGames.CoroutineSystem.Core
 {
     public class CoroutineService : ICoroutineService
     {
         private CoroutinesHolder _coroutinesHolder;
-        
+
         public Coroutine StartCoroutine(IEnumerator routine)
         {
             if (_coroutinesHolder == null)
@@ -20,7 +21,10 @@ namespace Services.CoroutineSystem.Core
 
         public void StopCoroutine(Coroutine routine)
         {
-            _coroutinesHolder.StopCoroutine(routine);
+            if (_coroutinesHolder != null && routine != null)
+            {
+                _coroutinesHolder.StopCoroutine(routine);
+            }
         }
 
         public Coroutine StartDelayedTask(float delay, Action task)
@@ -37,7 +41,7 @@ namespace Services.CoroutineSystem.Core
         public void DoTaskAtNextFrame(Action task)
         {
             StartCoroutine(DoTaskAtNextFrameRoutine(task));
-            
+
         }
 
         private IEnumerator DoTaskAtNextFrameRoutine(Action task)
